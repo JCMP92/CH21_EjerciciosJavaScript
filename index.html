@@ -12,7 +12,454 @@
     />
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne"
+            aria-expanded="false"
+            aria-controls="flush-collapseOne"
+          >
+            Número mayor en un conjunto de números
+          </button>
+        </h2>
+        <div
+          id="flush-collapseOne"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingOne"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <!--Body  Campos van aquí ------------------------------------------------------------------------ -->
+            <form class="row g-3">
+              <div class="col-auto">
+                <label for="num1" class="visually-hidden">Primer número</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="num1"
+                  max="100"
+                  min="0"
+                />
+              </div>
+              <div class="col-auto">
+                <label for="num2" class="visually-hidden">Segundo número</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="num2"
+                  max="100"
+                  min="0"
+                />
+              </div>
+              <div class="col-auto">
+                <label for="num3" class="visually-hidden">Tercer número</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="num3"
+                  max="100"
+                  min="0"
+                />
+              </div>
+              <div class="col-auto">
+                <label for="num4" class="visually-hidden">Cuarto número</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="num4"
+                  max="100"
+                  min="0"
+                />
+              </div>
+              <div class="col-auto">
+                <label for="num5" class="visually-hidden">Quinto número</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="num5"
+                  max="100"
+                  min="0"
+                />
+              </div>
+              <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3" id="func1">
+                  Número mayor
+                </button>
+              </div>
+              <div class="col-auto">
+                <button
+                  type="submit"
+                  class="btn btn-primary mb-3"
+                  id="reinicio1"
+                >
+                  Reiniciar
+                </button>
+              </div>
+              <h3><span class="badge bg-primary" id="result1"></span></h3>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- ACORDEÓN 2 INICIO----------------------------------------------------------------------------------------- -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseTwo"
+            aria-expanded="false"
+            aria-controls="flush-collapseTwo"
+          >
+            Número menor en un conjunto de números
+          </button>
+        </h2>
+        <div
+          id="flush-collapseTwo"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingTwo"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <form class="row g-3">
+              <div class="col-auto">
+                <label for="num1s" class="visually-hidden">Primer número</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="num1s"
+                  max="100"
+                  min="0"
+                />
+              </div>
+              <div class="col-auto">
+                <label for="num2s" class="visually-hidden"
+                  >Segundo número</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="num2s"
+                  max="100"
+                  min="0"
+                />
+              </div>
+              <div class="col-auto">
+                <label for="num3s" class="visually-hidden">Tercer número</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="num3s"
+                  max="100"
+                  min="0"
+                />
+              </div>
+              <div class="col-auto">
+                <label for="num4s" class="visually-hidden">Cuarto número</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="num4s"
+                  max="100"
+                  min="0"
+                />
+              </div>
+              <div class="col-auto">
+                <label for="num5s" class="visually-hidden">Quinto número</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="num5s"
+                  max="100"
+                  min="0"
+                />
+              </div>
+              <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3" id="func2">
+                  Número menor
+                </button>
+              </div>
+              <div class="col-auto">
+                <button
+                  type="submit"
+                  class="btn btn-primary mb-3"
+                  id="reinicio2"
+                >
+                  Reiniciar
+                </button>
+              </div>
+              <h3><span class="badge bg-primary" id="result2"></span></h3>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- ACORDEÓN 3 INICIO-------------------------------------------------------------------------------------------->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingThree">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseThree"
+            aria-expanded="false"
+            aria-controls="flush-collapseThree"
+          >
+            ¿Algún número se repite?
+          </button>
+        </h2>
+        <div
+          id="flush-collapseThree"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingThree"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <form class="row g-3">
+              <div class="col-auto">
+                <label for="num-1" class="visually-hidden">Primer número</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="num-1"
+                  max="100"
+                  min="0"
+                />
+              </div>
+              <div class="col-auto">
+                <label for="num-2" class="visually-hidden"
+                  >Segundo número</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="num-2"
+                  max="100"
+                  min="0"
+                />
+              </div>
+              <div class="col-auto">
+                <label for="num-3" class="visually-hidden">Tercer número</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="num-3"
+                  max="100"
+                  min="0"
+                />
+              </div>
+              <div class="col-auto">
+                <label for="num-4" class="visually-hidden">Cuarto número</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="num-4"
+                  max="100"
+                  min="0"
+                />
+              </div>
+              <div class="col-auto">
+                <label for="num-5" class="visually-hidden">Quinto número</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="num-5"
+                  max="100"
+                  min="0"
+                />
+              </div>
+              <div class="col-auto">
+                <label for="num-6" class="visually-hidden">Quinto número</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="num-6"
+                  max="100"
+                  min="0"
+                />
+              </div>
+              <div class="col-auto">
+                <label for="num-7" class="visually-hidden">Quinto número</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="num-7"
+                  max="100"
+                  min="0"
+                />
+              </div>
+              <div class="col-auto">
+                <label for="num-8" class="visually-hidden">Quinto número</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="num-8"
+                  max="100"
+                  min="0"
+                />
+              </div>
+              <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3" id="func3">
+                  ¿Hay números repetidos?
+                </button>
+              </div>
+              <div class="col-auto">
+                <button
+                  type="submit"
+                  class="btn btn-primary mb-3"
+                  id="reinicio3"
+                >
+                  Reiniciar
+                </button>
+              </div>
+              <h3><span class="badge bg-primary" id="result3"></span></h3>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Acordeón 4 -------------------------------------------------------------------------------------------------------------->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingFour">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseFour"
+            aria-expanded="false"
+            aria-controls="flush-collapseFour"
+          >
+            Número mayor en un conjunto de números
+          </button>
+        </h2>
+        <div
+          id="flush-collapseFour"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingFour"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <!--Body  Campos van aquí ------------------------------------------------------------------------ -->
+            <form class="row g-3">
+              <div class="col-auto">
+                <label for="num--1" class="visually-hidden"
+                  >Primer número</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="num--1"
+                  max="100"
+                  min="0"
+                />
+              </div>
+              <div class="col-auto">
+                <label for="num--2" class="visually-hidden"
+                  >Segundo número</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="num--2"
+                  max="100"
+                  min="0"
+                />
+              </div>
+              <div class="col-auto">
+                <label for="num--3" class="visually-hidden"
+                  >Tercer número</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="num--3"
+                  max="100"
+                  min="0"
+                />
+              </div>
+              <div class="col-auto">
+                <label for="num--4" class="visually-hidden"
+                  >Cuarto número</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="num--4"
+                  max="100"
+                  min="0"
+                />
+              </div>
+              <div class="col-auto">
+                <label for="num--5" class="visually-hidden"
+                  >Quinto número</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="num--5"
+                  max="100"
+                  min="0"
+                />
+              </div>
+              <div class="col-auto">
+                <label for="num--6" class="visually-hidden"
+                  >Quinto número</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="num--6"
+                  max="100"
+                  min="0"
+                />
+              </div>
+              <div class="col-auto">
+                <label for="num--7" class="visually-hidden"
+                  >Quinto número</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="num--7"
+                  max="100"
+                  min="0"
+                />
+              </div>
+              <div class="col-auto">
+                <label for="num--8" class="visually-hidden"
+                  >Quinto número</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="num--8"
+                  max="100"
+                  min="0"
+                />
+              </div>
+              <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3" id="func4">
+                  Revuelvelo
+                </button>
+              </div>
+              <div class="col-auto">
+                <button
+                  type="submit"
+                  class="btn btn-primary mb-3"
+                  id="reinicio4"
+                >
+                  Reiniciar
+                </button>
+              </div>
+              <h3><span class="badge bg-primary" id="result4"></span></h3>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"

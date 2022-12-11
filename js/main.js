@@ -1,46 +1,175 @@
 // Tarea Ejercicios-----------------------------------------------------------------------------------------------------------------------------------------
 
 //E1- Escribir una función que tome un arreglo de números y devuelva el número mayor de la lista.-----------------------------------------------------------
-let array = [3, 5, 7, 1, 6];
-console.log(Math.max(...array));
+let arrayUno = document.getElementById('num1');
+let arrayDos = document.getElementById('num2');
+let arrayTres = document.getElementById('num3');
+let arrayCuatro = document.getElementById('num4');
+let arrayCinco = document.getElementById('num5');
+let result = document.getElementById('result1');
+let mayorBtn = document.getElementById('func1');
+let restartBtn = document.getElementById('reinicio1');
+
+function highNum(a, b, c, d, e) {
+  let array = [a, b, c, d, e];
+  return (result.textContent = Math.max(...array));
+}
+
+mayorBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  highNum(
+    arrayUno.value,
+    arrayDos.value,
+    arrayTres.value,
+    arrayCuatro.value,
+    arrayCinco.value
+  );
+});
+restartBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  arrayUno.value = '';
+  arrayDos.value = '';
+  arrayTres.value = '';
+  arrayCuatro.value = '';
+  arrayCinco.value = '';
+  result.textContent = '';
+});
 
 //E2- María llega a su entrevista de trabajo para el rol de Desarrollador Junior y se le pide que resuelva este problema:------------------------------------
 // Dada una lista de números [-1, 3, 4, 2, 6], escribe una función en javascript para calcular el número más pequeño.
-let mariaArray = [-1, 3, 4, 2, 6];
-console.log(Math.min(...mariaArray));
+let array1 = document.getElementById('num1s');
+let array2 = document.getElementById('num2s');
+let array3 = document.getElementById('num3s');
+let array4 = document.getElementById('num4s');
+let array5 = document.getElementById('num5s');
+let resultMenor = document.getElementById('result2');
+let menorBtn = document.getElementById('func2');
+let restartBtnMenor = document.getElementById('reinicio2');
 
+function lowNum(a, b, c, d, e) {
+  let array = [a, b, c, d, e];
+  return (resultMenor.textContent = Math.min(...array));
+}
+
+menorBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  lowNum(array1.value, array2.value, array3.value, array4.value, array5.value);
+});
+
+restartBtnMenor.addEventListener('click', function (e) {
+  e.preventDefault();
+  array1.value = '';
+  array2.value = '';
+  array3.value = '';
+  array4.value = '';
+  array5.value = '';
+  resultMenor.textContent = '';
+});
 //E3 Escribir una función que permita saber si un número se repite dentro de un arreglo.---------------------------------------------------------------------
 
 // Caso 1: Resultado esperado: El número 5 se encuentra más de una vez [1, 22, 5, 17, 10, 5, 40, 5]
 // Caso 2: Resultado esperado: El número 7 se encuentra más de una vez [7, 41, 5, 7, 10, 13, 2]
 // Caso 3: Resultado esperado: No hay números repetidos [1, 22, 5, 14, 24, 31, 27, 15, 105]
+let num1 = document.getElementById('num-1');
+let num2 = document.getElementById('num-2');
+let num3 = document.getElementById('num-3');
+let num4 = document.getElementById('num-4');
+let num5 = document.getElementById('num-5');
+let num6 = document.getElementById('num-6');
+let num7 = document.getElementById('num-7');
+let num8 = document.getElementById('num-8');
+let resultRep = document.getElementById('result3');
+let repeatBtn = document.getElementById('func3');
+let restartBtnRep = document.getElementById('reinicio3');
 
-let myArray = [1, 22, 5, 14, 24, 31, 27, 15, 105, 22];
-
-function duplicated(Array) {
-  for (var i = 0; i < Array.length; i++) {
+function duplicated(a, b, c, d, e, f, g, h) {
+  let array = [a, b, c, d, e, f, g, h];
+  for (var i = 0; i < array.length; i++) {
     //Excute the process for each element within the array
-    for (var j = 0; j < Array.length; j++) {
+    for (var j = 0; j < array.length; j++) {
       //This helps us to compare values with each other
       if (i != j) {
         //Avoid a comparison between the same element
-        if (Array[i] == Array[j]) {
-          return `El ${Array[i]} se encuentra más de una vez en [${Array}]`; // means there are duplicate values
+        if (array[i] == array[j]) {
+          return (resultRep.textContent = `El ${array[i]} se encuentra más de una vez en [${array}]`); // means there are duplicate values
         }
       }
     }
   }
-  return `No hay números repetidos en [${Array}]`; // means there are no duplicate values.
+  return (resultRep.textContent = `No hay números repetidos en [${Array}]`); // means there are no duplicate values.
 }
-console.log(duplicated(myArray));
+
+repeatBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  duplicated(
+    num1.value,
+    num2.value,
+    num3.value,
+    num4.value,
+    num5.value,
+    num6.value,
+    num7.value,
+    num8.value
+  );
+});
+restartBtnRep.addEventListener('click', function (e) {
+  e.preventDefault();
+  num1.value = '';
+  num2.value = '';
+  num3.value = '';
+  num4.value = '';
+  num5.value = '';
+  num6.value = '';
+  num7.value = '';
+  num8.value = '';
+  resultRep.textContent = '';
+});
 
 //E4 Escribir una función que tome un arreglo ordenado y devuelva un arreglo completamente desordenado Entrada: [1, 2, 5, 14, 24, 31, 50, 105] Posible salida: [105, 31, 14, 1, 2, 50, 24, 5]
+let numone = document.getElementById('num--1');
+let numtwo = document.getElementById('num--2');
+let numthree = document.getElementById('num--3');
+let numfour = document.getElementById('num--4');
+let numfive = document.getElementById('num--5');
+let numsix = document.getElementById('num--6');
+let numseven = document.getElementById('num--7');
+let numeight = document.getElementById('num--8');
+let resultSh = document.getElementById('result4');
+let shuffleBtn = document.getElementById('func4');
+let restartBtnSh = document.getElementById('reinicio4');
 
-let arr = [1, 2, 5, 14, 24, 31, 50, 105];
+const shuffledArr = (array) =>
+  (resultSh.textContent = array.sort(() => 0.5 - Math.random()));
 
-const shuffledArr = (array) => array.sort(() => 0.5 - Math.random());
-
-console.log(shuffledArr(arr));
+function shuffle(a, b, c, d, e, f, g, h) {
+  let arr = [a, b, c, d, e, f, g, h];
+  shuffledArr(arr);
+}
+shuffleBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  shuffle(
+    numone.value,
+    numtwo.value,
+    numthree.value,
+    numfour.value,
+    numfive.value,
+    numsix.value,
+    numseven.value,
+    numeight.value
+  );
+});
+restartBtnSh.addEventListener('click', function (e) {
+  e.preventDefault();
+  numone.value = '';
+  numtwo.value = '';
+  numthree.value = '';
+  numfour.value = '';
+  numfive.value = '';
+  numsix.value = '';
+  numseven.value = '';
+  numeight.value = '';
+  resultSh.textContent = '';
+});
 
 // Tareas complementarias--------------------------------------------------------------------------------------------------------------------------------------------------
 
