@@ -84,9 +84,9 @@ let restartBtnRep = document.getElementById('reinicio3');
 
 function duplicated(a, b, c, d, e, f, g, h) {
   let array = [a, b, c, d, e, f, g, h];
-  for (var i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     //Excute the process for each element within the array
-    for (var j = 0; j < array.length; j++) {
+    for (let j = 0; j < array.length; j++) {
       //This helps us to compare values with each other
       if (i != j) {
         //Avoid a comparison between the same element
@@ -96,7 +96,7 @@ function duplicated(a, b, c, d, e, f, g, h) {
       }
     }
   }
-  return (resultRep.textContent = `No hay números repetidos en [${Array}]`); // means there are no duplicate values.
+  return (resultRep.textContent = `No hay números repetidos en [${array}]`); // means there are no duplicate values.
 }
 
 repeatBtn.addEventListener('click', function (e) {
@@ -174,69 +174,195 @@ restartBtnSh.addEventListener('click', function (e) {
 // Tareas complementarias--------------------------------------------------------------------------------------------------------------------------------------------------
 
 // 1.- Solicitar 3 números (entre el 1 y el 100) y definir cual es el mayor.
-function greates(x, y, z) {
-  let arr = [x, y, z];
-  return Math.max(...arr);
-}
-console.log(greates(25, 145, -20));
+let number1 = document.getElementById('number1');
+let number2 = document.getElementById('number2');
+let number3 = document.getElementById('number3');
+let resultOf = document.getElementById('result5');
+let funcBtn = document.getElementById('func5');
+let resetBtn = document.getElementById('reinicio5');
 
-// 2.- Solicitar 3 números (entre el 1 y el 100) y definir el menor de tres números.
-function minor(a, b, c) {
-  if (a > 0 && a <= 100 && b > 0 && b <= 100 && c > 0 && c <= 100) {
-    return Math.min(a, b, c);
+function greatest(x, y, z) {
+  let arr = [x, y, z];
+  if (x > 0 && x <= 100 && y > 0 && y <= 100 && z > 0 && z <= 100) {
+    return (resultOf.textContent = Math.max(...arr));
   } else return 'Ingresa numeros en un rango de 1 al 100';
 }
 
-console.log(minor(99, 42, 500));
+funcBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  greatest(number1.value, number2.value, number3.value);
+});
+resetBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  number1.value = '';
+  number2.value = '';
+  number3.value = '';
+  resultOf.textContent = '';
+});
+
+// 2.- Solicitar 3 números (entre el 1 y el 100) y definir el menor de tres números.
+let numbera = document.getElementById('number-1');
+let numberb = document.getElementById('number-2');
+let numberc = document.getElementById('number-3');
+let resultOfMin = document.getElementById('result6');
+let funcBtnMin = document.getElementById('func6');
+let resetBtnMin = document.getElementById('reinicio6');
+
+function minor(a, b, c) {
+  if (a > 0 && a <= 100 && b > 0 && b <= 100 && c > 0 && c <= 100) {
+    return (resultOfMin.textContent = Math.min(a, b, c));
+  } else return 'Ingresa numeros en un rango de 1 al 100';
+}
+
+funcBtnMin.addEventListener('click', function (e) {
+  e.preventDefault();
+  minor(numbera.value, numberb.value, numberc.value);
+});
+resetBtnMin.addEventListener('click', function (e) {
+  e.preventDefault();
+  numbera.value = '';
+  numberb.value = '';
+  numberc.value = '';
+  resultOfMin.textContent = '';
+});
 
 // 3.- Adivinar un número entre el 1 y el 100 en el menor número de pasos posibles
 
-let randomNum = Math.floor(Math.random() * 100);
+// let randomNum = Math.floor(Math.random() * 100);
 
-const arr100 = [
-  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
-  23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41,
-  42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60,
-  61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79,
-  80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98,
-  99, 100,
-];
-arr100.forEach((num) => {
-  if (num == randomNum) {
-    console.log(num);
-  }
-});
+// const arr100 = [
+//   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
+//   23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41,
+//   42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60,
+//   61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79,
+//   80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98,
+//   99, 100,
+// ];
+// arr100.forEach((num) => {
+//   if (num == randomNum) {
+//     console.log(num);
+//   }
+// });
 
-// 4.- Solicitar un entero (entre el 100 y el 200) y determinar si es múltiplo de 3
+let myNum = document.getElementById('mynumber');
+let resultGuess = document.getElementById('result7');
+let funcBtnGuess = document.getElementById('func7');
+let resetBtnGuess = document.getElementById('reinicio7');
 
-function multDeTres(num) {
-  if (Number.isInteger(num) && num >= 100 && num <= 200) {
-    if (num % 3 == 0) {
-      return `${num} es un multiplo de 3`;
-    } else {
-      return `${num} no es un multiplo de 3`;
-    }
-  } else {
-    console.log('No es válido, ingresa un número entero del 100 al 200');
-  }
-}
-
-// 5.- Elaborar un algoritmo para leer 3 números y determinar sí uno es la suma de los otros dos
-
-function xequalyplusz(x, y, z) {
-  if (x == y + z) {
-    return true;
-  } else if (y == x + z) {
-    return true;
-  } else if (z == x + y) {
+function intento(numeroCorrecto) {
+  let randomNum = Math.floor(Math.random() * 101);
+  if (randomNum == numeroCorrecto) {
     return true;
   } else {
     return false;
   }
 }
 
+funcBtnGuess.addEventListener('click', function (e) {
+  e.preventDefault();
+  let aciertoMaquina = false;
+  let numeroIntentos = 0;
+  while (aciertoMaquina == false) {
+    if (intento(myNum.value) == true) {
+      aciertoMaquina = true;
+      resultGuess.textContent = `Número: ${myNum.value}, Intentos: ${numeroIntentos}`;
+    } else {
+      numeroIntentos = numeroIntentos + 1;
+    }
+  }
+});
+resetBtnGuess.addEventListener('click', function (e) {
+  e.preventDefault();
+  myNum.value = '';
+  resultGuess.textContent = '';
+});
+
+// 4.- Solicitar un entero (entre el 100 y el 200) y determinar si es múltiplo de 3
+let myNumNew = document.getElementById('myNum');
+let resultMult = document.getElementById('result8');
+let funcBtnMult = document.getElementById('func8');
+let resetBtnMult = document.getElementById('reinicio8');
+
+function multDeTres(num) {
+  if (Number.isInteger(num)) {
+    if (num >= 100 && num <= 200) {
+      if (num % 3 == 0) {
+        return (resultMult.textContent = `${num} es un multiplo de 3`);
+      } else {
+        return (resultMult.textContent = `${num} no es un multiplo de 3`);
+      }
+    } else {
+      return (resultMult.textContent =
+        'No es válido, ingresa un número entero del 100 al 200');
+    }
+  } else {
+    return (resultMult.textContent = 'No es un número entero');
+  }
+}
+
+funcBtnMult.addEventListener('click', function (e) {
+  e.preventDefault();
+  multDeTres(Number(myNumNew.value));
+});
+resetBtnMult.addEventListener('click', function (e) {
+  e.preventDefault();
+  myNumNew.value = '';
+  resultMult.textContent = '';
+});
+
+// 5.- Elaborar un algoritmo para leer 3 números y determinar sí uno es la suma de los otros dos
+let opt1 = document.getElementById('opt1');
+let opt2 = document.getElementById('opt2');
+let opt3 = document.getElementById('opt3');
+let resultado = document.getElementById('result9');
+let funcion = document.getElementById('func9');
+let resetOpt = document.getElementById('reinicio9');
+
+function xequalyplusz(x, y, z) {
+  if (x == y + z) {
+    return (resultado.textContent = `${x} es igual a ${y} + ${z}`);
+  } else if (y == x + z) {
+    return (resultado.textContent = `${y} es igual a ${x} + ${z}`);
+  } else if (z == x + y) {
+    return (resultado.textContent = `${z} es igual a ${x} + ${y}`);
+  } else {
+    return (resultado.textContent =
+      'Ningún número es igual a la suma de los otros dos');
+  }
+}
+
+funcion.addEventListener('click', function (e) {
+  e.preventDefault();
+  xequalyplusz(Number(opt1.value), Number(opt2.value), Number(opt3.value));
+});
+
+resetOpt.addEventListener('click', function (e) {
+  e.preventDefault();
+  opt1.value = '';
+  opt2.value = '';
+  opt3.value = '';
+  resultado.textContent = '';
+});
+
 // 6.- Elabora un algoritmo para leer un número y determinar si es par o impar
+let evenOrOdd = document.getElementById('evenOrOdd');
+let resultEO = document.getElementById('result10');
+let funcBtnEO = document.getElementById('func10');
+let resetBtnEO = document.getElementById('reinicio10');
 
 function isEven(num) {
-  return num % 2 == 0 ? 'Even number' : 'Odd number';
+  return num % 2 == 0
+    ? (resultEO.textContent = 'Par')
+    : (resultEO.textContent = 'Impar');
 }
+
+funcBtnEO.addEventListener('click', function (e) {
+  e.preventDefault();
+  isEven(evenOrOdd.value);
+});
+
+resetBtnEO.addEventListener('click', function (e) {
+  e.preventDefault();
+  evenOrOdd.value = '';
+  resultEO.textContent = '';
+});
